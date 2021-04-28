@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UangKu</string>
+    <string name="title_diterima_dari">Diterima Dari</string>
+    <string name="title_keterangan">Keterangan</string>
+    <string name="title_jumlah">Jumlah</string>
+    <string name="title_submit">Submit</string>
+    <string name="foo">Lorem Ipsum</string>
+</resources>
