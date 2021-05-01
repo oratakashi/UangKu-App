@@ -12,10 +12,10 @@ import javax.inject.Inject
  **/
 
 class CreatePresenter @Inject constructor(
-    private val repository: Repository
+        private val repository: Repository
 ) : CreateContract.Presenter {
 
-    lateinit var views :CreateContract.View
+    lateinit var views: CreateContract.View
 
     override fun setView(view: CreateContract.View) {
         views = view
@@ -23,21 +23,23 @@ class CreatePresenter @Inject constructor(
 
     override fun insertData(diterima: String, keterangan: String, jumlah: String) {
         repository.insertUangMasuk(
-            UangMasuk(
-                null,
-                diterima,
-                keterangan,
-                jumlah.toInt()
-            ),
-            object : Callback<Boolean> {
-                override fun Result(data: Boolean) {
-                    views.onResult(data)
-                }
+                UangMasuk(
+                        null,
+                        diterima,
+                        keterangan,
+                        jumlah.toInt(),
+                        "",
+                        ""
+                ),
+                object : Callback<Boolean> {
+                    override fun Result(data: Boolean) {
+                        views.onResult(data)
+                    }
 
-                override fun Error(error: Throwable?) {
-                    views.onError(error)
+                    override fun Error(error: Throwable?) {
+                        views.onError(error)
+                    }
                 }
-            }
         )
     }
 }

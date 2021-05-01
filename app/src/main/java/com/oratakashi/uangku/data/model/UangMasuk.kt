@@ -15,5 +15,7 @@ data class UangMasuk(
     val UangMasukID : Int?,
     val terimaDari : String,
     val keterangan : String,
-    val jumlah : Int
+    val jumlah : Int,
+    val date : String?,
+    val nomor : String?
 )

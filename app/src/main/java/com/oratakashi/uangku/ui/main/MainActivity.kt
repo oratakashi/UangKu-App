@@ -15,6 +15,12 @@ import com.oratakashi.viewbinding.core.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+/**
+ * Created by Abdul Hafiidh Septiandaru
+ * 28 April 2021
+ * github : https://github.com/oratakashi
+ **/
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), MainContract.View {
 
